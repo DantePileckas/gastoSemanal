@@ -15,6 +15,8 @@ const gasto ={
 }
 //agregarlo y enviarlo por props
 
+this.props.agregarGasto(gasto);
+
 
 // resetear el formulario 
 e.currentTarget.reset();
