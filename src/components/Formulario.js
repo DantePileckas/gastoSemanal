@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class FormularioGasto extends Component{
 //Refs para los campos del formuario
@@ -11,7 +12,7 @@ e.preventDefaut();
 //crear el objeto con los datos
 const gasto ={
     nombreGasto : this.nombreGasto.current.value,
-    cantidadGasto: this.nombreGasto.current.value
+    cantidadGasto: this.cantidadGasto.current.value
 }
 //agregarlo y enviarlo por props
 
@@ -41,5 +42,7 @@ e.currentTarget.reset();
         )
     }
 }
-
+FormularioGasto.propTypes = {
+    agregarGasto: PropTypes.func.isRequired
+}
 export default FormularioGasto;
